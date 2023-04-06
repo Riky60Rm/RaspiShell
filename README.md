@@ -1,2 +1,2 @@
 # RaspiShell
-Shell used to customize a fresh Raspberry pi OS 
+Shell used to customize a fresh flashed Raspberry pi OS 
