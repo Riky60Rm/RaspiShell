@@ -9,3 +9,7 @@ which has to launched after flashing a sd/Usb memory, and after mounting the boo
 2) ConfigNewSystem.sh
 After the raspberry Pi has booted up with the new created sd/Usb memory open a Terminal and launch this shell , it will install some (for me) useful packages : mc , qbittorrent, amule, gparted, firefox-esr, default-jdk, nemo,  nfs-kernel-server. than it will add two lines to the file /etc/exports, which rapresent my NFS shares.
 this shell will log all the operations in a log file , created where the shell is located. 
+
+
+3) ListOfUpgrPackages.sh 
+I use this shell to update the Raspi OS for every package but realvnc-vnc-server because the new version does talk with Remmina which I use to remote desktop the raspberry
