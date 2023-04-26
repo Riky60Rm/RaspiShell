@@ -4,7 +4,7 @@ Shell used to customize a fresh flashed Raspberry pi OS
 tired of manual operation to install and configure Raspi OS I wrote two Shells :
 
 1) PrepareNewIso.sh
-which has to launched after flashing a sd/Usb memory and mounted the bootfs rootfs partitions on a system ( I use linux mint but I think every linux distribution should be ok), this shell will change the content of /boot/config,txt in order to resize the video dimension when working with HDMI, insert two commented lines  to disable WiFi and Bluetooth, then it will create for the PI user some directory where it copies some configurations files for Terminal, Geany, Pcmanfm.
+which has to be launched after flashing a sd/Usb memory on bootfs rootfs partitions I mount on a my system ( I use linux mint but I think every linux distribution should be ok), this shell will change the content of /boot/config,txt in order to resize the video dimension when working with HDMI, insert two commented lines  to disable WiFi and Bluetooth, then it will create for the PI user some directory where it copies some configurations files for Terminal, Geany, Pcmanfm. 
 It will create a Shell directory and copy the other shell I wrote : ConfigNewSystem.sh
 
 2) ConfigNewSystem.sh
