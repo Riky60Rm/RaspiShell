@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# v2023.06.16 - First created
+# Riccardo Cigola <rcigola@gmail.com>
+#
+# Read the read.md for the funcionality of the program-
+
 # Define a function
 function pressKey() {
     echo 'press a key to continue or Ctrl-c to exit'
