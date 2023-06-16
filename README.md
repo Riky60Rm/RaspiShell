@@ -12,4 +12,4 @@ this shell will log all the operations in a log file , created where the shell i
 
 
 3) ListOfUpgrPackages.sh 
-I use this shell to update the Raspi OS for every package but realvnc-vnc-server because the new version does not talk with Remmina which I use to remote desktop the raspberry
+I use this shell to upgrade the Raspi OS for the new  packages, it will write a log file of the upgradeted packages, if there is no packages to upgrade it will exit .
