@@ -5,7 +5,6 @@
 #
 # Read the read.md for the funcionality of the program-
 
-
 # Define a function
 function pressKey() {
     echo 'press a key to continue or Ctrl-c to exit'
@@ -19,7 +18,7 @@ function Purpose() {
     echo ' which actually does not connect to Remmina vnc client'
     echo ' List of upgradable packages :'
     while read -r line; do
-      echo "$line"
+      echo "-> $line"
     done <<< "$output"        
     pressKey
 }
@@ -66,7 +65,8 @@ createFile
 # Loop through each line of the output
 while read -r line; do
   # Use regular expressions to test if the line contains the package name
-  if [[ $line =~ ^realvnc-vnc-server/ ]]; then
+  if [[ $line =~ ^realvnc-vnc-serverzz/ ]]; then
+#  if [[ $line =~ ^realvnc-vnc-server/ ]]; then
     writeFile "NOT upgr $line" "bold"
   elif [[ $line =~ ^Listing\.\.\.$ ]]; then
     continue 
@@ -85,6 +85,22 @@ while read -r line; do
     echo "  "
   fi
 done <<< "$output"
+
+# Define the tar archive file and the file you want to check
+tar_file="ListOfUpgrPackages.tar"
+
+# put new log file in a tar file
+tar -rf ListOfUpgrPackages.tar $fileName
+
+# Use tar to list the contents of the archive and grep to search for the file
+if tar tf "$tar_file" | grep -q "$fileName"; then
+    echo "$fileName added to $tar_file."
+    rm $fileName 
+    echo "$fileName deleted"
+else
+    echo "$fileName does not exist in $tar_file."
+    echo "$fileName not deleted" 
+fi
 
 writeFile " end of shell execution "
 
